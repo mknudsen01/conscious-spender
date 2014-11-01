@@ -1,0 +1,24 @@
+{
+  "name": "conscious",
+  "version": "0.0.0",
+  "description": "Spend more wisely",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/mknudsen01/conscious-spender.git"
+  },
+  "author": "Matthew Knudsen",
+  "license": "BSD-2-Clause",
+  "bugs": {
+    "url": "https://github.com/mknudsen01/conscious-spender/issues"
+  },
+  "homepage": "https://github.com/mknudsen01/conscious-spender",
+  "dependencies": {
+    "hapi": "~7.2.0",
+    "moonboots_hapi": "~3.0.1"
+  }
+}
