@@ -19,6 +19,8 @@
   "homepage": "https://github.com/mknudsen01/conscious-spender",
   "dependencies": {
     "hapi": "~7.2.0",
-    "moonboots_hapi": "~3.0.1"
+    "moonboots_hapi": "~3.0.1",
+    "domready": "~1.0.7",
+    "ampersand-view": "~7.1.5"
   }
 }
