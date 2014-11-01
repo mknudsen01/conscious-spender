@@ -1,6 +1,6 @@
 var MainView = require('./views/main');
 var domready = require('domready');
-var Router = require('./ampersand-router');
+var Router = require('./router');
 
 window.app = {
   init: function() {
@@ -10,9 +10,11 @@ window.app = {
       self.view = new MainView({
         el: document.body
       });
+
+      self.router.history.start({pushState: true});
     });
+
     console.log("Hello, world!");
-    self.router.history.start({pushState: true});
   }
 };
 
