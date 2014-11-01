@@ -8,7 +8,11 @@ server.pack.register({
     appPath: '/{p*}',
     moonboots: {
       main: __dirname + '/client/app.js',
-      development: true
+      development: true,
+      stylesheets: [
+        __dirname + '/public/reset.css',
+        __dirname + '/public/styles.css'
+      ]
     }
   }
 }, function(){
