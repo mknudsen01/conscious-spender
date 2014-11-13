@@ -1,3 +1,12 @@
+.font--larger {
+  font-size: 24px;
+}
+.font--large {
+  font-size: 20px;
+}
+.font--normal {
+  font-size: 16px;
+}
 body {
   background-color: #999;
 }
@@ -9,7 +18,22 @@ a {
   color: #666;
 }
 .color--primary {
-  color: #f1c40f;
+  color: #d2ab59;
+}
+.btn {
+  padding: 3%;
+  color: #fff;
+  transition: 0.3s all ease;
+  font-weight: bold;
+}
+.btn--primary {
+  background-color: #d2ab59;
+  color: #333;
+}
+.btn--primary:hover {
+  background-color: #ba984f;
+  color: #bbb;
+  transition: 0.3s all ease;
 }
 .row {
   width: 100%;
