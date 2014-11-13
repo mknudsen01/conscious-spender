@@ -1,3 +1,26 @@
 body {
   background-color: #999;
 }
+ul {
+  list-style: none;
+}
+a {
+  text-decoration: none;
+  color: #666;
+}
+.color--primary {
+  color: #f1c40f;
+}
+.row {
+  width: 100%;
+  max-width: 960px;
+  margin: 0 auto;
+  box-sizing: border-box;
+}
+[class*="col-"] {
+  box-sizing: border-box;
+  display: inline-block;
+}
+.col-1-2 {
+  width: 50%;
+}

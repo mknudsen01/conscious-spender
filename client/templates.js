@@ -14,6 +14,11 @@
     var templatizer = {};
     templatizer["pages"] = {};
 
+    // body.jade compiled template
+    templatizer["body"] = function tmpl_body() {
+        return '<body><nav class="row"><div class="col-1-2"><a href="/" class="color--primary">Conscious</a></div><ul class="col-1-2"><li><a href="/categories" data-ui-role="brand">Categories</a></li></ul></nav><section class="row"><section data-hook="page-container"></section></section></body>';
+    };
+
     // pages/home.jade compiled template
     templatizer["pages"]["home"] = function tmpl_pages_home() {
         return '<section class="page"><h2>Home page</h2></section>';
