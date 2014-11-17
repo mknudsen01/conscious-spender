@@ -36,6 +36,14 @@ a {
   color: #bbb;
   transition: 0.3s all ease;
 }
+.btn--primary.active {
+  background-color: #ffd06c;
+}
+.btn--primary.active:hover {
+  background-color: #ba984f;
+  color: #bbb;
+  transition: 0.3s all ease;
+}
 .row {
   width: 100%;
   max-width: 960px;
@@ -70,4 +78,7 @@ a {
 }
 .push-down--1 {
   margin-top: 1%;
+}
+.push-down--2 {
+  margin-top: 2%;
 }

@@ -1,3 +1,4 @@
+color-primary--lighter = #FFD06C
 color-primary = #d2ab59
 color-primary--darker = #BA984F
 color-heading = #666
@@ -45,6 +46,12 @@ a
     background-color: color-primary--darker
     color: color-gray--lighter
     transition: .3s all ease
+  &.active
+    background-color: color-primary--lighter
+    &:hover
+      background-color: color-primary--darker
+      color: color-gray--lighter
+      transition: .3s all ease
 
 .row
   width: 100%
@@ -81,3 +88,6 @@ a
 
 .push-down--1
   margin-top: 1%
+
+.push-down--2
+  margin-top: 2%
