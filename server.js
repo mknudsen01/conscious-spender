@@ -5,6 +5,18 @@ var config = require('getconfig');
 var templatizer = require('templatizer');
 var stylizer = require('stylizer');
 
+server.route({
+  method: "GET",
+  path: '/api/me',
+  handler: function(request, reply) {
+    reply({
+      givenName: 'Matthew',
+      familyName: 'Knudsen',
+      email: 'mknudsen01@gmail.com'
+    });
+  }
+});
+
 server.pack.register({
   plugin: moonboots,
   options: {
