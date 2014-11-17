@@ -9,7 +9,8 @@ window.app = {
     domready( function() {
       self.router = new Router();
       self.view = new MainView({
-        el: document.body
+        el: document.body,
+        model: me
       });
       self.router.history.start({pushState: true});
     });

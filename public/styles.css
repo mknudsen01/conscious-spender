@@ -7,6 +7,9 @@
 .font--normal {
   font-size: 16px;
 }
+.text--right {
+  text-align: right;
+}
 body {
   background-color: #999;
 }

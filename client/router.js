@@ -1,11 +1,13 @@
 var Router = require('ampersand-router');
 var HomePage = require('./pages/home');
 var CategoriesPage = require('./pages/categories');
+var ProfilePage = require('./pages/profile');
 
 module.exports = Router.extend({
   routes: {
     '': 'home',
-    'categories': 'categories'
+    'categories': 'categories',
+    'profile': 'profile'
   },
 
   home: function() {
@@ -14,5 +16,9 @@ module.exports = Router.extend({
 
   categories: function() {
     this.trigger('page', new CategoriesPage() );
+  },
+
+  profile: function() {
+    this.trigger('page', new ProfilePage() );
   }
 });
