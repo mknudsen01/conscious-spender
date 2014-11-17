@@ -1,9 +1,10 @@
 body
-  nav.row
+  nav.row.push-down--1
     div.col-1-2
-      a.color--primary.font--larger(href="/") Conscious
+      a.color--primary.font--larger(href="/", data-ui-role="brand") Conscious
     ul.col-1-2
-      li
-        a.btn.btn--primary(href="/categories", data-ui-role="brand") Categories
-  section.row
-    section(data-hook="page-container")
+      li.col-1-4
+        a.btn.btn--primary.full(href="/") Home
+      li.col-1-4
+        a.btn.btn--primary.full(href="/categories") Categories
+  section.row.push-down--1(data-hook="page-container")

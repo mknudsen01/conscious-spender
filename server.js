@@ -30,7 +30,6 @@ server.pack.register({
           watch: __dirname + '/public/app/**/.styl'
         }, done);
       }
-
     }
   }
 }, function(){
