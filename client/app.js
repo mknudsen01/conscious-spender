@@ -12,7 +12,6 @@ window.app = {
       });
       self.router.history.start({pushState: true});
     });
-    console.log("Hello, world!");
   }
 };
 
