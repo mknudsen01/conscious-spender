@@ -1,0 +1,50 @@
+.font--larger {
+  font-size: 24px;
+}
+.font--large {
+  font-size: 20px;
+}
+.font--normal {
+  font-size: 16px;
+}
+body {
+  background-color: #999;
+}
+ul {
+  list-style: none;
+}
+a {
+  text-decoration: none;
+  color: #666;
+}
+.color--primary {
+  color: #d2ab59;
+}
+.btn {
+  padding: 3%;
+  color: #fff;
+  transition: 0.3s all ease;
+  font-weight: bold;
+}
+.btn--primary {
+  background-color: #d2ab59;
+  color: #333;
+}
+.btn--primary:hover {
+  background-color: #ba984f;
+  color: #bbb;
+  transition: 0.3s all ease;
+}
+.row {
+  width: 100%;
+  max-width: 960px;
+  margin: 0 auto;
+  box-sizing: border-box;
+}
+[class*="col-"] {
+  box-sizing: border-box;
+  display: inline-block;
+}
+.col-1-2 {
+  width: 50%;
+}

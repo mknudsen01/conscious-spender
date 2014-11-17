@@ -1,8 +1,12 @@
 var View = require('ampersand-view');
 var ViewSwitcher = require('ampersand-view-switcher');
+var templates = require('../templates');
 
 module.exports = View.extend({
-  template: '<body><h1>Hello, world</h1><main data-hook="page-container"></main></body>',
+  template: templates.body,
+  events: {
+    'click a[href]': 'handleLinkClick'
+  },
   autoRender: true,
   initialize: function() {
     this.listenTo(app.router, 'page', this.handleNewPage);
@@ -15,5 +19,13 @@ module.exports = View.extend({
 
   handleNewPage: function(page) {
     this.pages.set(page);
+  },
+
+  handleLinkClick: function(e) {
+    var linkTag = e.target;
+    if(linkTag.host == window.location.host) {
+      app.router.history.navigate(linkTag.pathname, {trigger: true});
+      e.preventDefault();
+    }
   }
 });

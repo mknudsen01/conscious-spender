@@ -10,10 +10,8 @@ window.app = {
       self.view = new MainView({
         el: document.body
       });
-
       self.router.history.start({pushState: true});
     });
-
     console.log("Hello, world!");
   }
 };

@@ -1,0 +1,59 @@
+color-primary = #d2ab59
+color-primary--darker = #BA984F
+color-heading = #666
+color-white   = #fff
+color-gray--darker = #333
+color-gray--lighter = #BBB
+
+font--normal = 16px
+font--large = 20px
+font--larger = 24px
+
+.font--larger
+  font-size: font--larger
+
+.font--large
+  font-size: font--large
+
+.font--normal
+  font-size: font--normal
+
+body
+  background-color: #999
+
+ul
+  list-style: none
+
+a
+  text-decoration: none
+  color: color-heading
+
+.color--primary
+  color: color-primary
+
+.btn
+  padding: 3%
+  color: color-white
+  transition: .3s all ease
+  font-weight: bold
+
+.btn--primary
+  background-color: color-primary
+  color: color-gray--darker
+  &:hover
+    background-color: color-primary--darker
+    color: color-gray--lighter
+    transition: .3s all ease
+
+.row
+  width: 100%
+  max-width: 960px
+  margin: 0 auto
+  box-sizing: border-box
+
+[class*="col-"]
+  box-sizing: border-box
+  display: inline-block
+
+.col-1-2
+  width: 50%
