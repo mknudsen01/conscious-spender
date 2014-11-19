@@ -3,21 +3,21 @@ var API = require('hapi-dummy-api');
 module.exports = new API({
   data: [
     {
-      id: '1',
-      userId: '14',
+      id: 1,
+      userId: 14,
       name: 'rent'
     },
 
     {
-      id: '2',
-      userId: '14',
+      id: 2,
+      userId: 14,
       name: 'clothing'
     },
 
     {
-      id: '3',
-      userId: '12',
-      name: ''
+      id: 3,
+      userId: 12,
+      name: 'clothing'
     }
   ],
   rootUrl: '/api/categories',

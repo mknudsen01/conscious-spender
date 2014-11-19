@@ -29,6 +29,7 @@
     "stylizer": "~2.0.0",
     "ampersand-dom": "~1.2.7",
     "ampersand-model": "~4.0.3",
-    "hapi-dummy-api": "~0.2.0"
+    "hapi-dummy-api": "~0.2.0",
+    "ampersand-rest-collection": "~2.0.4"
   }
 }

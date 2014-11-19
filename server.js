@@ -12,7 +12,7 @@ server.route({
   path: '/api/me',
   handler: function(request, reply) {
     reply({
-      id: '14',
+      id: 14,
       givenName: 'Matthew',
       familyName: 'Knudsen',
       email: 'mknudsen01@gmail.com'
@@ -50,8 +50,7 @@ server.pack.register([
         }
       }
     }
-  }
-], function(){
+  }], function(){
   server.start();
   console.log("Server running at port 8080");
 });

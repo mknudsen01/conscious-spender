@@ -4,12 +4,12 @@ module.exports = new API({
   data: [
     {
       "users": {
-        "14" : {
+        14 : {
           name: "Matthew Knudsen",
           email: "mknudsen01@gmail.com",
           categories: {
-            "1": true,
-            "2": true
+            1: true,
+            2: true
           }
         }
       }
