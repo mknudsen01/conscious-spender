@@ -7,5 +7,14 @@ module.exports = Model.extend({
     familyName: 'string',
     email: 'string',
     categories: 'object'
+  },
+
+  derived: {
+    fullName: {
+      deps: ['givenName', 'familyName'],
+      fn: function() {
+        return this.givenName + ' ' + this.familyName;
+      }
+    }
   }
 });

@@ -1,10 +1,17 @@
-color-primary--lighter = #FFD06C
-color-primary = #d2ab59
-color-primary--darker = #BA984F
+color-primary = #E5C611
+color-primary--lighter = lighten(color-primary, 20%)
+color-primary--darker = darken(color-primary, 20%)
 color-heading = #666
 color-white   = #fff
 color-gray--darker = #333
 color-gray--lighter = #BBB
+color-secondary = #E67E22
+color-secondary--lighter = lighten(color-secondary, 20%)
+color-secondary--darker = darken(color-secondary, 20%)
+color-danger = #d14233
+color-danger--lighter = lighten(color-danger, 20%)
+color-danger--darker = darken(color-danger, 20%)
+
 
 font--normal = 16px
 font--large = 20px
@@ -24,10 +31,14 @@ font--larger = 24px
   text-align: right
 
 body
-  background-color: #999
+  background-color: color-gray--lighter
 
 ul
   list-style: none
+  -webkit-padding-start: 0
+
+h2
+  margin: 0
 
 a
   text-decoration: none
@@ -37,6 +48,7 @@ a
   color: color-primary
 
 .btn
+  border: 0
   padding: 20px
   color: color-white
   transition: .3s all ease
@@ -45,22 +57,43 @@ a
 
 .btn--primary
   background-color: color-primary
-  color: color-gray--darker
   &:hover
     background-color: color-primary--darker
-    color: color-gray--lighter
     transition: .3s all ease
   &.active
     background-color: color-primary--lighter
     &:hover
       background-color: color-primary--darker
-      color: color-gray--lighter
       transition: .3s all ease
+
+.btn--secondary
+  background-color: color-secondary
+  &:hover
+    background-color: color-secondary--darker
+    transition: .3s all ease
+  &.active
+    background-color: color-secondary--lighter
+    &:hover
+      background-color: color-secondary--darker
+      transition: .3s all ease
+
+.btn--danger
+  background-color: color-danger
+  &:hover
+    background-color: color-danger--darker
+    transition: .3s all ease
+  &.active
+    background-color: color-danger--lighter
+    &:hover
+      background-color: color-danger--darker
+      transition: .3s all ease
+
 
 .row
   width: 100%
   max-width: 960px
   margin: 0 auto
+  padding: 5px 0
   box-sizing: border-box
 
 [class*="col-"]

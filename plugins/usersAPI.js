@@ -11,6 +11,16 @@ module.exports = new API({
         1: true,
         2: true
       }
+    },
+
+    {
+      id: 2,
+      givenName: "Jack",
+      familyName: "Johnson",
+      email: "jack@example.com",
+      categories: {
+        3: true
+      }
     }
   ],
   rootUrl: '/api/users',
