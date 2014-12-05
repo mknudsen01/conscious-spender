@@ -26,6 +26,10 @@
     "ampersand-view-switcher": "~1.1.1",
     "getconfig": "~0.3.0",
     "templatizer": "~1.0.1",
-    "stylizer": "~2.0.0"
+    "stylizer": "~2.0.0",
+    "ampersand-dom": "~1.2.7",
+    "ampersand-model": "~4.0.3",
+    "hapi-dummy-api": "~0.2.0",
+    "ampersand-rest-collection": "~2.0.4"
   }
 }

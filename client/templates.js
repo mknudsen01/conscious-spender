@@ -13,15 +13,26 @@
 
     var templatizer = {};
     templatizer["pages"] = {};
+    templatizer["partials"] = {};
 
     // body.jade compiled template
     templatizer["body"] = function tmpl_body() {
-        return '<body><nav class="row push-down--1"><div class="col-1-2"><a href="/" data-ui-role="brand" class="color--primary font--larger">Conscious</a></div><ul class="col-1-2"><li class="col-1-4"><a href="/" class="btn btn--primary full">Home</a></li><li class="col-1-4"><a href="/categories" class="btn btn--primary full">Categories</a></li></ul></nav><section data-hook="page-container" class="row push-down--1"></section></body>';
+        return '<body><nav class="row push-down--1"><div class="col-1-2"><a href="/" data-ui-role="brand" class="color--primary font--larger">Conscious</a></div><section class="js-nav-links col-1-2"><a href="/" data-hook="link-home" class="col-1-3 btn btn--primary">Home</a><a href="/categories" class="col-1-3 btn btn--primary">Categories</a><a href="/profile" data-hook="username" class="col-1-3 text--right truncate"></a></section></nav><section data-hook="page-container" class="row"></section></body>';
     };
 
     // pages/home.jade compiled template
     templatizer["pages"]["home"] = function tmpl_pages_home() {
-        return '<section class="page"><h2>Home page</h2></section>';
+        return '<section class="row"><h2>Home page</h2></section>';
+    };
+
+    // pages/users.jade compiled template
+    templatizer["pages"]["users"] = function tmpl_pages_users() {
+        return '<section class="row"><h2>Users</h2><ul data-hook="user-list"></ul></section>';
+    };
+
+    // partials/user.jade compiled template
+    templatizer["partials"]["user"] = function tmpl_partials_user() {
+        return '<li data-ui-role="user-partial" class="row"><span data-hook="username" class="col-1-2"></span><button class="btn btn--danger col-1-4">Delete</button><button class="btn btn--secondary col-1-4">Edit</button></li>';
     };
 
     return templatizer;
