@@ -15,6 +15,20 @@ module.exports = Model.extend({
       fn: function() {
         return this.givenName + ' ' + this.familyName;
       }
+    },
+
+    avatarUrl: {
+      deps: ['id', 'fullName'],
+      fn: function() {
+        return "http://robohash.org/"+ this.fullName;
+      }
+    },
+
+    viewUrl: {
+      deps: ['id'],
+      fn: function() {
+        return "users/" + this.id;
+      }
     }
   }
 });

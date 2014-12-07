@@ -7,6 +7,20 @@ module.exports = View.extend({
     'model.fullName': {
       type: 'text',
       hook: 'username'
+    },
+
+    'model.viewUrl': {
+      type: 'attribute',
+      name: 'href',
+      hook: 'action-user-profile'
     }
+  },
+
+  events: {
+    'click [data-hook="action-delete-user"]': 'handleDeleteClick'
+  },
+
+  handleDeleteClick: function() {
+    this.model.destroy();
   }
 });

@@ -77,6 +77,13 @@ a {
   background-color: #aa3326;
   transition: 0.3s all ease;
 }
+.media,
+.media__img img {
+  width: 100%;
+}
+.media__body--top {
+  vertical-align: top;
+}
 .row {
   width: 100%;
   max-width: 960px;
@@ -115,6 +122,9 @@ a {
 }
 .push-down--2 {
   margin-top: 2%;
+}
+.push-down--3 {
+  margin-top: 3%;
 }
 .truncate {
   white-space: nowrap;

@@ -10,5 +10,28 @@ module.exports = Model.extend({
     givenName: 'string',
     familyName: 'string',
     email: 'string'
+  },
+
+  derived: {
+    fullName: {
+      deps: ['givenName', 'familyName'],
+      fn: function() {
+        return this.givenName + ' ' + this.familyName;
+      }
+    },
+
+    avatarUrl: {
+      deps: ['id', 'fullName'],
+      fn: function() {
+        return "http://robohash.org/"+ this.fullName;
+      }
+    },
+
+    viewUrl: {
+      deps: ['id'],
+      fn: function() {
+        return "users/" + this.id;
+      }
+    }
   }
 });

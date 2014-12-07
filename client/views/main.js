@@ -12,6 +12,12 @@ module.exports = View.extend({
     'model.givenName': {
       type: 'text',
       hook: 'username'
+    },
+
+    'model.viewUrl': {
+      type: 'attribute',
+      name: 'href',
+      hook: 'action-user-profile'
     }
   },
   autoRender: true,

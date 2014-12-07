@@ -1,3 +1,4 @@
+//uses the user VIEW, not the page
 var View = require('ampersand-view');
 var templates = require('../templates');
 var UserView = require('../views/user');
