@@ -24,8 +24,11 @@ a {
   text-decoration: none;
   color: #666;
 }
-.color--primary {
+.color-primary {
   color: #e5c611;
+}
+.color-primary--lighter {
+  color: #f0d63a;
 }
 .btn {
   border: 0;
@@ -88,13 +91,16 @@ a {
   width: 100%;
   max-width: 960px;
   margin: 0 auto;
-  padding: 5px 0;
-  box-sizing: border-box;
+  padding: 5px 20px 5px 0;
 }
 [class*="col-"] {
   box-sizing: border-box;
   display: inline-block;
   padding-right: 20px;
+  vertical-align: middle;
+}
+.row [class*="col-"]:last-child {
+  padding-right: 0;
 }
 .col-1-2 {
   width: 50%;
@@ -116,6 +122,12 @@ a {
 }
 .col-1-4 {
   width: 25%;
+}
+.col-1-8 {
+  width: 12.5%;
+}
+.col-7-8 {
+  width: 87.5%;
 }
 .push-down--1 {
   margin-top: 1%;

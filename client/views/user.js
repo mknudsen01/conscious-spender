@@ -13,6 +13,12 @@ module.exports = View.extend({
       type: 'attribute',
       name: 'href',
       hook: 'action-user-profile'
+    },
+
+    'model.avatarUrl': {
+      type: 'attribute',
+      name: 'src',
+      hook: 'user-avatar'
     }
   },
 

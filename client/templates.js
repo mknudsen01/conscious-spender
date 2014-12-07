@@ -17,7 +17,7 @@
 
     // body.jade compiled template
     templatizer["body"] = function tmpl_body() {
-        return '<body><nav class="row push-down--1"><div class="col-1-2"><a href="/" data-ui-role="brand" class="color--primary font--larger">Conscious</a></div><section class="js-nav-links col-1-2"><a href="/" data-hook="link-home" class="col-1-3 btn btn--primary">Home</a><a href="/categories" class="col-1-3 btn btn--primary">Categories</a><a href="users/me" data-hook="username" class="col-1-3 text--right truncate"></a></section></nav><section data-hook="page-container" class="row"></section></body>';
+        return '<body><nav class="row push-down--1"><div class="col-1-2"><a href="/" data-ui-role="brand" class="color-primary--lighter font--larger">Conscious</a></div><section class="js-nav-links col-1-2"><a href="/" data-hook="link-home" class="col-1-3 btn btn--primary">Home</a><a href="/categories" class="col-1-3 btn btn--primary">Categories</a><a href="users/me" data-hook="username" class="col-1-3 text--right truncate"></a></section></nav><section data-hook="page-container" class="row"></section></body>';
     };
 
     // pages/home.jade compiled template
@@ -37,7 +37,7 @@
 
     // partials/user.jade compiled template
     templatizer["partials"]["user"] = function tmpl_partials_user() {
-        return '<li data-ui-role="user-partial" class="row"><span data-hook="username" class="col-1-2"></span><button data-hook="action-delete-user" class="btn btn--danger col-1-4">Delete</button><a data-hook="action-user-profile" class="btn btn--secondary col-1-4">Edit</a></li>';
+        return '<li data-ui-role="user-partial" class="row media"><div class="media__img col-1-8"><img data-hook="user-avatar"/></div><div class="media__body col-7-8"><span data-hook="username" class="font--larger col-1-2"></span><button data-hook="action-delete-user" class="btn btn--danger col-1-4">Delete</button><a data-hook="action-user-profile" class="btn btn--secondary col-1-4">Edit</a></div></li>';
     };
 
     return templatizer;
