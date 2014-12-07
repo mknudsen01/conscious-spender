@@ -14,10 +14,11 @@
     var templatizer = {};
     templatizer["pages"] = {};
     templatizer["partials"] = {};
+    templatizer["pages"]["users"] = {};
 
     // body.jade compiled template
     templatizer["body"] = function tmpl_body() {
-        return '<body><nav class="row push-down--1"><div class="col-1-2"><a href="/" data-ui-role="brand" class="color-primary--lighter font--larger">Conscious</a></div><section class="js-nav-links col-1-2"><a href="/" data-hook="link-home" class="col-1-3 btn btn--primary">Home</a><a href="/categories" class="col-1-3 btn btn--primary">Categories</a><a href="users/me" data-hook="username" class="col-1-3 text--right truncate"></a></section></nav><section data-hook="page-container" class="row"></section></body>';
+        return '<body><nav class="row push-down--1"><div class="col-1-2"><a href="/" data-ui-role="brand" class="color-primary--lighter font--larger">Conscious</a></div><section class="js-nav-links col-1-2"><a href="/" data-hook="link-home" class="col-1-3 btn btn--primary">Home</a><a href="/categories" class="col-1-3 btn btn--primary">Categories</a><a href="/users/me" data-hook="username" class="col-1-3 text--right truncate"></a></section></nav><section data-hook="page-container" class="row"></section></body>';
     };
 
     // pages/home.jade compiled template
@@ -25,14 +26,19 @@
         return '<section class="row"><h2>Home page</h2></section>';
     };
 
-    // pages/user.jade compiled template
-    templatizer["pages"]["user"] = function tmpl_pages_user() {
+    // pages/users/index.jade compiled template
+    templatizer["pages"]["users"]["index"] = function tmpl_pages_users_index() {
+        return '<section class="row"><h2>Users</h2><ul data-hook="user-list"></ul></section>';
+    };
+
+    // pages/users/me.jade compiled template
+    templatizer["pages"]["users"]["me"] = function tmpl_pages_users_me() {
         return '<section data-ui-role="user-profile" class="page"><section class="media row"><div class="media__img col-1-4"><img data-hook="user-avatar"/></div><div class="media__body--top col-3-4 push-down--3"><h2 data-hook="user-full-name"></h2></div></section></section>';
     };
 
-    // pages/users.jade compiled template
-    templatizer["pages"]["users"] = function tmpl_pages_users() {
-        return '<section class="row"><h2>Users</h2><ul data-hook="user-list"></ul></section>';
+    // pages/users/show.jade compiled template
+    templatizer["pages"]["users"]["show"] = function tmpl_pages_users_show() {
+        return '<section data-ui-role="user-profile" class="page"><section class="media row"><div class="media__img col-1-4"><img data-hook="user-avatar"/></div><div class="media__body--top col-3-4 push-down--3"><h2 data-hook="user-full-name"></h2></div></section></section>';
     };
 
     // partials/user.jade compiled template

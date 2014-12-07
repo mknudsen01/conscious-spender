@@ -1,15 +1,16 @@
 var Router = require('ampersand-router');
 var HomePage = require('./pages/home');
 var CategoriesPage = require('./pages/categories');
-var UserPage = require('./pages/user');
-var UsersPage = require('./pages/users');
+var UserPage = require('./pages/users/show');
+var MePage = require('./pages/users/me');
+var UsersPage = require('./pages/users/index');
 
 module.exports = Router.extend({
   routes: {
     '': 'home',
     'categories': 'categories',
     'users': 'users',
-    'users/me': 'userProfile',
+    'users/me': 'mePage',
     'users/:id': 'userProfile'
   },
 
@@ -26,13 +27,13 @@ module.exports = Router.extend({
       this.trigger('page', new UserPage({
         id: Number(id),
         collection: app.users
-      }) );
-    } else {
-      this.trigger('page', new UserPage({
-        id: window.me.id,
-        collection: app.users
-      }) );
+      })
+      );
     }
+  },
+
+  mePage: function() {
+    this.trigger('page', new MePage());
   },
 
   users: function() {
