@@ -30,6 +30,9 @@ a {
 .color-primary--lighter {
   color: #f0d63a;
 }
+.color-gray--darker {
+  color: #333;
+}
 .btn {
   border: 0;
   padding: 20px;
@@ -80,6 +83,15 @@ a {
   background-color: #aa3326;
   transition: 0.3s all ease;
 }
+input[type="text"] {
+  color: #333;
+  border: 1px solid #bbb;
+  font-size: 24px;
+  width: 100%;
+}
+.border--lighter {
+  border: 1px solid;
+}
 .media,
 .media__img img {
   width: 100%;
@@ -87,11 +99,14 @@ a {
 .media__body--top {
   vertical-align: top;
 }
+.hidden {
+  visibility: hidden;
+}
 .row {
   width: 100%;
   max-width: 960px;
   margin: 0 auto;
-  padding: 5px 20px 5px 0;
+  padding: 5px 0;
 }
 [class*="col-"] {
   box-sizing: border-box;
@@ -125,6 +140,9 @@ a {
 }
 .col-1-8 {
   width: 12.5%;
+}
+.push-1-4 {
+  margin-left: 25%;
 }
 .col-7-8 {
   width: 87.5%;

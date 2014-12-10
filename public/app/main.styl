@@ -50,6 +50,9 @@ a
 .color-primary--lighter
   color: color-primary--lighter
 
+.color-gray--darker
+  color: color-gray--darker
+
 .btn
   border: 0
   padding: 20px
@@ -91,6 +94,15 @@ a
       background-color: color-danger--darker
       transition: .3s all ease
 
+input[type="text"]
+  color: color-gray--darker
+  border: 1px solid color-gray--lighter
+  font-size: font--larger
+  width: 100%
+
+.border--lighter
+  border: 1px solid @color-gray--lighter
+
 .media
 
 .media__img img
@@ -99,11 +111,14 @@ a
 .media__body--top
   vertical-align: top
 
+.hidden
+  visibility: hidden
+
 .row
   width: 100%
   max-width: 960px
   margin: 0 auto
-  padding: 5px 20px 5px 0
+  padding: 5px 0
 
 
 [class*="col-"]
@@ -138,6 +153,9 @@ a
 
 .col-1-8
   width: 12.5%
+
+.push-1-4
+  margin-left: 25%
 
 .col-7-8
   width: 87.5%

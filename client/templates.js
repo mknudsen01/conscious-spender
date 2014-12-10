@@ -12,6 +12,7 @@
     var jade=function(){function r(r){return null!=r&&""!==r}function n(e){return Array.isArray(e)?e.map(n).filter(r).join(" "):e}var e={};return e.merge=function t(n,e){if(1===arguments.length){for(var a=n[0],s=1;s<n.length;s++)a=t(a,n[s]);return a}var i=n["class"],l=e["class"];(i||l)&&(i=i||[],l=l||[],Array.isArray(i)||(i=[i]),Array.isArray(l)||(l=[l]),n["class"]=i.concat(l).filter(r));for(var o in e)"class"!=o&&(n[o]=e[o]);return n},e.joinClasses=n,e.cls=function(r,t){for(var a=[],s=0;s<r.length;s++)a.push(t&&t[s]?e.escape(n([r[s]])):n(r[s]));var i=n(a);return i.length?' class="'+i+'"':""},e.attr=function(r,n,t,a){return"boolean"==typeof n||null==n?n?" "+(a?r:r+'="'+r+'"'):"":0==r.indexOf("data")&&"string"!=typeof n?" "+r+"='"+JSON.stringify(n).replace(/'/g,"&apos;")+"'":t?" "+r+'="'+e.escape(n)+'"':" "+r+'="'+n+'"'},e.attrs=function(r,t){var a=[],s=Object.keys(r);if(s.length)for(var i=0;i<s.length;++i){var l=s[i],o=r[l];"class"==l?(o=n(o))&&a.push(" "+l+'="'+o+'"'):a.push(e.attr(l,o,!1,t))}return a.join("")},e.escape=function(r){var n=String(r).replace(/&/g,"&amp;").replace(/</g,"&lt;").replace(/>/g,"&gt;").replace(/"/g,"&quot;");return n===""+r?r:n},e.rethrow=function a(r,n,e,t){if(!(r instanceof Error))throw r;if(!("undefined"==typeof window&&n||t))throw r.message+=" on line "+e,r;try{t=t||require("fs").readFileSync(n,"utf8")}catch(s){a(r,null,e)}var i=3,l=t.split("\n"),o=Math.max(e-i,0),c=Math.min(l.length,e+i),i=l.slice(o,c).map(function(r,n){var t=n+o+1;return(t==e?"  > ":"    ")+t+"| "+r}).join("\n");throw r.path=n,r.message=(n||"Jade")+":"+e+"\n"+i+"\n\n"+r.message,r},e}();
 
     var templatizer = {};
+    templatizer["forms"] = {};
     templatizer["pages"] = {};
     templatizer["partials"] = {};
     templatizer["pages"]["users"] = {};
@@ -19,6 +20,11 @@
     // body.jade compiled template
     templatizer["body"] = function tmpl_body() {
         return '<body><nav class="row push-down--1"><div class="col-1-2"><a href="/" data-ui-role="brand" class="color-primary--lighter font--larger">Conscious</a></div><section class="js-nav-links col-1-2"><a href="/" data-hook="link-home" class="col-1-3 btn btn--primary">Home</a><a href="/categories" class="col-1-3 btn btn--primary">Categories</a><a href="/users/me" data-hook="username" class="col-1-3 text--right truncate"></a></section></nav><section data-hook="page-container" class="row"></section></body>';
+    };
+
+    // forms/textInput.jade compiled template
+    templatizer["forms"]["textInput"] = function tmpl_forms_textInput() {
+        return '<section data-ui-role="form-input" class="row"><label><span data-hook="label" class="font--larger row"></span><input/><div data-hook="message-container" class="row"><div data-hook="message-text"></div></div></label></section>';
     };
 
     // pages/home.jade compiled template
@@ -33,12 +39,17 @@
 
     // pages/users/me.jade compiled template
     templatizer["pages"]["users"]["me"] = function tmpl_pages_users_me() {
-        return '<section data-ui-role="user-profile" class="page"><section class="media row"><div class="media__img col-1-4"><img data-hook="user-avatar"/></div><div class="media__body--top col-3-4 push-down--3"><h2 data-hook="user-full-name"></h2></div></section></section>';
+        return '<section data-ui-role="user-profile"><section class="media row"><div class="media__img col-1-4"><img data-hook="user-avatar"/></div><div class="media__body--top col-3-4 push-down--3"><h2 data-hook="user-full-name"></h2></div></section></section>';
+    };
+
+    // pages/users/new.jade compiled template
+    templatizer["pages"]["users"]["new"] = function tmpl_pages_users_new() {
+        return '<section data-ui-role="new-user"><form data-hook="new-user" class="push-1-4 col-1-2"><fieldset data-hook="field-container" class="row"></fieldset><button class="btn btn--primary">Create User</button></form></section>';
     };
 
     // pages/users/show.jade compiled template
     templatizer["pages"]["users"]["show"] = function tmpl_pages_users_show() {
-        return '<section data-ui-role="user-profile" class="page"><section class="media row"><div class="media__img col-1-4"><img data-hook="user-avatar"/></div><div class="media__body--top col-3-4 push-down--3"><h2 data-hook="user-full-name"></h2></div></section></section>';
+        return '<section data-ui-role="user-profile"><section class="media row"><div class="media__img col-1-4"><img data-hook="user-avatar"/></div><div class="media__body--top col-3-4 push-down--3"><h2 data-hook="user-full-name"></h2></div></section></section>';
     };
 
     // partials/user.jade compiled template

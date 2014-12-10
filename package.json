@@ -30,6 +30,8 @@
     "ampersand-dom": "~1.2.7",
     "ampersand-model": "~4.0.3",
     "hapi-dummy-api": "~0.2.0",
-    "ampersand-rest-collection": "~2.0.4"
+    "ampersand-rest-collection": "~2.0.4",
+    "ampersand-form-view": "~2.2.0",
+    "ampersand-input-view": "~3.1.0"
   }
 }

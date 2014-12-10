@@ -3,6 +3,7 @@ var HomePage = require('./pages/home');
 var CategoriesPage = require('./pages/categories');
 var UserPage = require('./pages/users/show');
 var MePage = require('./pages/users/me');
+var NewUserPage = require('./pages/users/new');
 var UsersPage = require('./pages/users/index');
 
 module.exports = Router.extend({
@@ -10,8 +11,9 @@ module.exports = Router.extend({
     '': 'home',
     'categories': 'categories',
     'users': 'users',
-    'users/me': 'mePage',
-    'users/:id': 'userProfile'
+    'users/me': 'me',
+    'users/new': 'userNew',
+    'users/:id': 'userProfile',
   },
 
   home: function() {
@@ -32,7 +34,7 @@ module.exports = Router.extend({
     }
   },
 
-  mePage: function() {
+  me: function() {
     this.trigger('page', new MePage());
   },
 
@@ -40,5 +42,9 @@ module.exports = Router.extend({
     this.trigger('page', new UsersPage({
       collection: app.users
     }) );
+  },
+
+  userNew: function() {
+    this.trigger('page', new NewUserPage());
   }
 });
