@@ -19,6 +19,12 @@ module.exports = View.extend({
       type: 'attribute',
       name: 'src',
       hook: 'user-avatar'
+    },
+
+    'model.editUrl': {
+      type: 'attribute',
+      name: 'href',
+      hook: 'action-user-edit'
     }
   },
 

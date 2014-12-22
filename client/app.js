@@ -19,6 +19,10 @@ window.app = {
       });
       self.router.history.start({pushState: true});
     });
+  },
+
+  navigate: function(url) {
+    app.router.history.navigate(url, { trigger: true});
   }
 };
 

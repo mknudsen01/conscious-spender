@@ -11,7 +11,11 @@ module.exports = View.extend({
         return new UserForm({
           el: el,
           submitCallback: function(data) {
-            console.log(data);
+            app.users.create(data, {
+              success: function() {
+                app.navigate('/users')
+              }
+            });
           }
         });
       }

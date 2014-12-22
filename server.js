@@ -1,5 +1,5 @@
 var hapi = require('hapi');
-var server = hapi.createServer(8080, 'localhost');
+var server = hapi.createServer(9999, 'localhost');
 var moonboots = require('moonboots_hapi');
 var config = require('getconfig');
 var templatizer = require('templatizer');
@@ -52,5 +52,5 @@ server.pack.register([
     }
   }], function(){
   server.start();
-  console.log("Server running at port 8080");
+  console.log("Server running at port 9999");
 });
